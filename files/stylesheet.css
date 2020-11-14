@@ -48,10 +48,14 @@ body {
 	color: #B1A91F;
 }
 
+#butt_snd:hover {
+	color: #FF5500;
+}
+
 @media (max-width: 600px) {
 	.profile_img {
-		max-width: 50%;
-		max-height: 50%;
+		max-width: 70%;
+		max-height: 70%;
 		
 	}
 }
