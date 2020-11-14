@@ -1,0 +1,33 @@
+body {
+	background-color: black;
+}
+.headline {
+	color: white;
+	font-family: 'Inter', sans-serif;
+	font-size: xx-large;
+
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.title {
+	color: white;
+	font-family: 'Nunito', sans-serif;
+	font-size: medium;
+
+	margin-top: 10px;
+	text-align: center;
+}
+
+#button_bar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.butt_soc {
+	background-color: black;
+	border: none;
+	color: white;
+	font-size: 20px;
+}
