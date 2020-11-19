@@ -45,7 +45,16 @@ body {
 }
 
 #butt_ins:hover {
-	color: #B1A91F;
+	/*color: #B1A91F;*/
+	background: rgb(254,222,127);
+	background: -moz-radial-gradient(bottom left, rgba(254,222,127,1) 0%, rgba(212,42,129,1) 50%, rgba(72,95,213,1) 100%);
+	background: -webkit-radial-gradient(bottom left, rgba(254,222,127,1) 0%, rgba(212,42,129,1) 50%, rgba(72,95,213,1) 100%);
+	background: radial-gradient(at bottom left, rgba(254,222,127,1) 0%, rgba(212,42,129,1) 50%, rgba(72,95,213,1) 100%);
+	
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color:transparent;
 }
 
 #butt_snd:hover {
