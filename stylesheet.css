@@ -31,6 +31,13 @@ body {
 	align-items: center;
 }
 
+#kofi{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+}
+
 .butt_soc {
 	background-color: black;
 	border: none;
