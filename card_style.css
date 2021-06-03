@@ -1,0 +1,50 @@
+body {
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 10%;
+}
+
+.card {
+  height: 425px;
+  width: 674px;
+  background-color: white;
+  display: flex;
+}
+
+.mainSquare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  height: 100%;
+  width: 425px;
+}
+
+.sideRect {
+  background-color: blue;
+  height: 100%;
+  width: 249px;
+}
+
+.nameLogo {
+  background-image: url("files/erevanayen_logo_BW2.png");
+  background-size: 100% 100%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.name {
+  font-family: "Roboto Mono", monospace;
+  font-size: 23px;
+  text-align: center;
+}
