@@ -79,3 +79,19 @@ body {
   margin-left: 25%;
   width: 50%;
 }
+
+@media (max-width: 679px) {
+  .card {
+    height: 674px;
+    width: 425px;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 680px) {
+  .card {
+    height: 425px;
+    width: 674px;
+    flex-direction: row;
+  }
+}
