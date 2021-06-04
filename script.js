@@ -9,7 +9,6 @@ logoEl.addEventListener("click", changeTheme);
 
 function changeTheme() {
   if (themeToggle) {
-    //Light theme
     logoEl.style.backgroundImage = `url("files/erevanayen_logo_BW2.png")`;
     cardEl.style.backgroundColor = `white`;
     cardEl.style.color = `black`;
