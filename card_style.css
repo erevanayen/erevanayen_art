@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: rgb(238, 238, 238);
 }
 
 .container {
@@ -15,27 +15,35 @@ body {
   height: 425px;
   width: 674px;
   background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
   display: flex;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .mainSquare {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: green;
+  background-color: white;
   height: 100%;
   width: 425px;
 }
 
-.sideRect {
-  background-color: blue;
+.mainSquare::after {
+  content: "";
+  background-color: black;
+  opacity: 10%;
+  display: block;
+  width: 1px;
   height: 100%;
-  width: 249px;
+  position: relative;
+  right: -112px;
 }
 
 .nameLogo {
   background-image: url("files/erevanayen_logo_BW2.png");
   background-size: 100% 100%;
+  margin-top: 23%;
   width: 200px;
   height: 200px;
   display: flex;
@@ -45,6 +53,29 @@ body {
 
 .name {
   font-family: "Roboto Mono", monospace;
+  font-weight: 500;
   font-size: 23px;
   text-align: center;
+}
+
+.sideRect {
+  background-color: white;
+  height: 100%;
+  width: 249px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.linkButton {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  margin-left: 25%;
+  width: 50%;
 }
