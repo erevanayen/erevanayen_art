@@ -67,6 +67,10 @@ body {
   align-items: flex-start;
 }
 
+.announce {
+  font-weight: 600 !important;
+}
+
 .linkButton {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
@@ -76,4 +80,8 @@ body {
   margin: 10px;
   margin-left: 25%;
   width: 50%;
+}
+
+.sideRect2 {
+  display: none;
 }
