@@ -10,7 +10,7 @@ logoEl.addEventListener("click", changeTheme);
 
 function changeTheme() {
   if (themeToggle) {
-    logoEl.style.backgroundImage = `url("files/erevanayen_logo_BW2.png")`;
+    logoEl.style.backgroundImage = `url("media/erevanayen_logo_BW2.png")`;
     cardEl.style.backgroundColor = `white`;
     cardEl.style.color = `black`;
     //set button styles
@@ -22,7 +22,7 @@ function changeTheme() {
       announceEl[i].style.color = `#FF105C`;
     }
   } else {
-    logoEl.style.backgroundImage = `url("files/erevanayen_logo_base_trans.png")`;
+    logoEl.style.backgroundImage = `url("media/erevanayen_logo_base_trans.png")`;
     cardEl.style.backgroundColor = `black`;
     cardEl.style.color = `#FF105C`;
     for (let i = 0; i < buttonsEl.length; i++) {
