@@ -4,11 +4,63 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: 10%;
+  margin-top: 2%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+  font-weight: 500;
+  font-size: 38px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.description {
+  width: 425px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.description > p {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+#mail {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .card {
@@ -20,23 +72,15 @@ body {
 
 .mainRect {
   border-radius: 5px;
+  background-color: white;
   background-size: cover;
   width: 425px;
   height: 674px;
   display: flex;
-  justify-content: center;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-}
+  flex-direction: column;
+  align-items: center;
 
-.linkButton {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 400;
-  font-size: 16px;
-  text-decoration: none;
-  color: black;
-  margin: 10px;
-  margin-left: 25%;
-  width: 50%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .sideRect2 {
@@ -64,33 +108,16 @@ body {
   }
 }
 
-#firstCard {
-  background-image: url("../media/bg_awakening.jpg");
-}
-
-#secondCard {
-  background-image: url("../media/bg_realization.jpg");
-}
-
-#thirdCard {
-  background-image: url("../media/bg_acceptance.jpg");
-}
-
-#firstCard .artwork {
-  background-image: url("../media/WEB_SIZE_sep_01_awakening.jpg");
-}
-
-#secondCard .artwork {
-  background-image: url("../media/WEB_SIZE_sep_02_realization.jpg");
-}
-
-#thirdCard .artwork {
-  background-image: url("../media/WEB_SIZE_sep_03_acceptance.jpg");
-}
-
 .artwork {
-  width: 80%;
+  width: 385px;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 10%;
+  margin-top: 20px;
+}
+
+.name {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
 }
