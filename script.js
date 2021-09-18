@@ -1,6 +1,6 @@
 console.log("I am running");
 
-var themeToggle = true;
+var themeToggle = false;
 
 const logoEl = document.getElementById("logo");
 const cardEl = document.getElementById("card");
