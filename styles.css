@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+:root {
+  font-family: "Share Tech Mono", monospace;
+  --col-dark-gray: #333333;
+  --col-mid-gray: #5c5c5c;
+  --col-light-gray: #999999;
+  --col-primary: #ff105c;
+  --col-secondary: #f6d100;
+}
+
+body {
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 16px;
+
+  height: 100svh;
+  width: 100vw;
+
+  margin: 0px;
+}
+
+.code-gray {
+  color: var(--col-mid-gray);
+}
+
+.code-light {
+  color: var(--col-light-gray);
+}
+
+#letters {
+  overflow: hidden;
+  width: 100%;
+  height: 100svh;
+
+  cursor: crosshair;
+  user-select: none;
+}
+
+.code-line,
+#pre-line,
+#post-lines {
+  /* This is set in script for generated lines */
+  white-space: nowrap;
+}
+
+#line-prefix,
+#line-postfix,
+#pre-lines,
+#post-lines {
+  color: var(--col-dark-gray);
+}
+
+#p-name {
+  color: var(--col-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: cell;
+}
+
+a:hover > .highlight {
+  color: var(--col-secondary);
+}
