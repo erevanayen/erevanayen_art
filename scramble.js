@@ -2,12 +2,22 @@ const letters =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+`-=[]{}|;':,./<>?";
 
 const changeTarget = document.getElementById("p-name");
+const textZed = "-------ZED";
+const textEre = "EREVANAYEN";
 const trigger = document.getElementById("name-tag");
 let scrambleTimeoutId = -1;
+let scrambleToggle = true;
 
 // Trigger the scrambleText function when the mouse hovers over the trigger element
 if (trigger && changeTarget) {
   trigger.addEventListener("mouseover", () => {
+    scrambleText(changeTarget);
+  });
+}
+
+// trigger the scramble text function when user taps on the trigger element
+if (trigger && changeTarget) {
+  trigger.addEventListener("touchend", () => {
     scrambleText(changeTarget);
   });
 }
@@ -29,12 +39,12 @@ document.addEventListener("unload", () => {
 // Takes a text element and scrambles the text
 // by replacing each letter with a random letter
 // and then slowly replacing it with the correct letter
-function scrambleText(text) {
+function scrambleText(textElement) {
   let iterations = 0;
-  const originalText = text.dataset.value;
+  const originalText = scrambleToggle ? textZed : textEre;
 
   const interval = setInterval(() => {
-    text.innerText = text.innerText
+    textElement.innerText = textElement.innerText
       .split("")
       .map((letter, index) => {
         if (index < iterations) {
@@ -46,16 +56,19 @@ function scrambleText(text) {
 
     if (originalText && iterations > originalText.length)
       clearInterval(interval);
+
     iterations += 1 / 3;
   }, 30);
+
+  scrambleToggle = !scrambleToggle;
 }
 
 function randomScramble() {
   if (changeTarget === null) return;
 
   scrambleText(changeTarget);
-  const minInterval = 10000;
-  const maxInterval = 20000;
+  const minInterval = 6000;
+  const maxInterval = 15000;
   let randomInterval =
     Math.floor(Math.random() * (maxInterval - minInterval + 1)) + minInterval;
 

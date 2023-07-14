@@ -37,6 +37,10 @@ body {
   user-select: none;
 }
 
+.comment-line {
+  color: var(--col-dark-gray);
+}
+
 .code-line,
 #pre-line,
 #post-lines {
