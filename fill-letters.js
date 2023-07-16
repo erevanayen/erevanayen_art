@@ -2,7 +2,7 @@ const fillChars =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()_+`-=[]{}|;':,./<>?";
 const fillCharsLength = fillChars.length;
 
-const leftOffset = 6;
+const leftOffset = 0;
 
 // global variables set for measurement calculations later
 let documentWidth = 0;
@@ -51,12 +51,13 @@ function main() {
   fontSize = parseInt(
     window.getComputedStyle(document.body).getPropertyValue("font-size")
   );
+
   // amount of characters that fit on one line
   lineLength = Math.floor((documentWidth / charWidth) * 1.1);
 
   formatCodeLines();
 
-  totalLinesCount = Math.ceil(documentHeight / fontSize);
+  totalLinesCount = Math.floor(documentHeight / fontSize);
 
   // console.log("Code lines count: " + codeLinesCount);
   // console.log("Total lines count: " + totalLinesCount);
@@ -96,7 +97,9 @@ function formatCodeLines() {
 
     // calculate the length of prefix and postfix parts of the line
     const linePrefixLength =
-      (lineLength - longestLineLength) / 2 + lineIndent - leftOffset;
+      Math.floor((lineLength - longestLineLength) / 2) +
+      lineIndent -
+      leftOffset;
     const linePostfixLength =
       lineLength - linePrefixLength - contentLength + leftOffset;
     // fill the prefix and postfix parts with random characters
@@ -111,7 +114,8 @@ function addPreLines() {
   const pre = document.querySelector("#pre-lines");
 
   // calculate the amount of pre lines to add
-  const preLinesCount = Math.ceil(totalLinesCount / 2) - codeLinesCount;
+  const preLinesCount = Math.floor((totalLinesCount - codeLinesCount) / 2);
+  console.log("Pre lines count: " + preLinesCount);
 
   // add pre lines to the pre element
   for (let i = 0; i < preLinesCount; i++) {
@@ -130,7 +134,8 @@ function addPostLines() {
   const post = document.querySelector("#post-lines");
 
   // calculate the amount of post lines to add
-  const postLinesCount = Math.ceil(totalLinesCount / 2) - codeLinesCount + 10;
+  const postLinesCount = Math.ceil((totalLinesCount - codeLinesCount) / 2) + 1;
+  console.log("Post lines count: " + postLinesCount);
 
   // add post lines to the post element
   for (let i = 0; i < postLinesCount; i++) {
