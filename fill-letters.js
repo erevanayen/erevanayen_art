@@ -115,7 +115,6 @@ function addPreLines() {
 
   // calculate the amount of pre lines to add
   const preLinesCount = Math.floor((totalLinesCount - codeLinesCount) / 2);
-  console.log("Pre lines count: " + preLinesCount);
 
   // add pre lines to the pre element
   for (let i = 0; i < preLinesCount; i++) {
@@ -135,7 +134,6 @@ function addPostLines() {
 
   // calculate the amount of post lines to add
   const postLinesCount = Math.ceil((totalLinesCount - codeLinesCount) / 2) + 1;
-  console.log("Post lines count: " + postLinesCount);
 
   // add post lines to the post element
   for (let i = 0; i < postLinesCount; i++) {

@@ -6,7 +6,7 @@ const textZed = "-------ZED";
 const textEre = "EREVANAYEN";
 const trigger = document.getElementById("name-tag");
 let scrambleTimeoutId = -1;
-let scrambleToggle = true;
+let scrambleToggle = false;
 
 // Trigger the scrambleText function when the mouse hovers over the trigger element
 if (trigger && changeTarget) {
@@ -23,12 +23,13 @@ if (trigger && changeTarget) {
 }
 
 // Scramble the text when the page loads
-document.addEventListener("DOMContentLoaded", () => {
-  if (changeTarget === null) return;
-  scrambleText(changeTarget);
-  // add a random timeout to scramble the text again
-  randomScramble();
-});
+if (trigger && changeTarget) {
+  document.addEventListener("DOMContentLoaded", () => {
+    // scrambleText(changeTarget);
+    // add a random timeout to scramble the text again
+    randomScramble();
+  });
+}
 
 document.addEventListener("unload", () => {
   // Clear the timeout if the user leaves the page
@@ -41,7 +42,7 @@ document.addEventListener("unload", () => {
 // and then slowly replacing it with the correct letter
 function scrambleText(textElement) {
   let iterations = 0;
-  const originalText = scrambleToggle ? textZed : textEre;
+  const originalText = this.scrambleToggle ? textZed : textEre;
 
   const interval = setInterval(() => {
     textElement.innerText = textElement.innerText
@@ -60,7 +61,7 @@ function scrambleText(textElement) {
     iterations += 1 / 3;
   }, 30);
 
-  scrambleToggle = !scrambleToggle;
+  this.scrambleToggle = !this.scrambleToggle;
 }
 
 function randomScramble() {
