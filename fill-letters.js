@@ -49,7 +49,7 @@ function main() {
   documentHeight = document.body.clientHeight;
   charWidth = getCharWidth();
   fontSize = parseInt(
-    window.getComputedStyle(document.body).getPropertyValue("font-size")
+    window.getComputedStyle(document.body).getPropertyValue("font-size"),
   );
 
   // amount of characters that fit on one line
@@ -121,6 +121,7 @@ function addPreLines() {
     const preLine = document.createElement("div");
     preLine.classList.add("pre-line");
     preLine.style.whiteSpace = "nowrap";
+    preLine.style.overflow = "hidden";
 
     preLine.textContent = getRandomString(lineLength);
     pre.appendChild(preLine);
