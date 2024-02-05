@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Waves v1.0.1</title>
+    <title>Erevanayen | Waves v1.0.3</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <script type="module" crossorigin src="assets/index-XPpzEon4.js"></script>
-    <link rel="stylesheet" crossorigin href="assets/index-2LeFf6cv.css" />
+    <script type="module" crossorigin src="assets/index-wodxWI3D.js"></script>
+    <link rel="stylesheet" crossorigin href="assets/index-BFufgtFq.css" />
     <link rel="icon" href="../media/erevanayen_logo_base_trans.png" />
   </head>
   <body>
-    <div id="menu">
+    <div id="menu" class="menu-hidden">
       <div id="tabs">
         <button type="button" id="button-tab-set" class="btn-tab-active">
           Settings
@@ -34,13 +34,26 @@
       </div>
       <div id="tab-pre" class="tab-hidden"></div>
       <p id="version">
-        v1.0.1 made by
+        v1.0.3 made by
         <a href="https://erevanayen.art/" target="_blank">@erevanayen</a>
       </p>
     </div>
     <button type="button" id="button-show" class="ui-button button-hidden">
       &lt;
     </button>
+
+    <div id="warning">
+      <div id="warn-container">
+        <h1>WARNING:</h1>
+        <p>
+          The content you are about to interact with may potentially trigger
+          seizures for people with photosensitive epilepsy.
+        </p>
+        <p>Viewer discretion is advised.</p>
+
+        <button type="button" id="button-warn">I UNDERSTAND</button>
+      </div>
+    </div>
     <canvas id="c"></canvas>
   </body>
 </html>
