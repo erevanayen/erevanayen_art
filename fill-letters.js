@@ -57,10 +57,10 @@ function main() {
 
   formatCodeLines();
 
-  totalLinesCount = Math.floor(documentHeight / fontSize);
-
-  // console.log("Code lines count: " + codeLinesCount);
-  // console.log("Total lines count: " + totalLinesCount);
+  // get container element height
+  const lineContainer = document.getElementById("letters");
+  const containerHeight = lineContainer.clientHeight;
+  totalLinesCount = Math.floor(containerHeight / fontSize);
 
   addPreLines();
   addPostLines();
