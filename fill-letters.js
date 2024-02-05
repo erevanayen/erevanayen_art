@@ -44,6 +44,8 @@ window.addEventListener("resize", () => {
 });
 
 function main() {
+  const lineContainer = document.getElementById("letters");
+  lineContainer.classList.remove("unrendered");
   // find necessary measurements
   documentWidth = document.body.clientWidth;
   documentHeight = document.body.clientHeight;
@@ -58,7 +60,6 @@ function main() {
   formatCodeLines();
 
   // get container element height
-  const lineContainer = document.getElementById("letters");
   const containerHeight = lineContainer.clientHeight;
   totalLinesCount = Math.floor(containerHeight / fontSize);
 
